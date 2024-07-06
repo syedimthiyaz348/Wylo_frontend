@@ -1,47 +1,48 @@
-import { useState } from 'react';
-import './index.css'
+import { useState } from "react";
+import "./index.css";
 
-const CreatePost = props => {
-  const {setPageRendering, close} = props
-  const [title, setTitle] = useState('')
-  const [content, setContent] = useState('')
+const CreatePost = (props) => {
+  const { setPageRendering, close } = props;
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
-  const enteringTitle = event => {
-    setTitle(event.target.value)
-  }
+  const enteringTitle = (event) => {
+    setTitle(event.target.value);
+  };
 
-  const enteringContent = event => {
-    setContent(event.target.value)
-  }
+  const enteringContent = (event) => {
+    setContent(event.target.value);
+  };
 
-  const enteringNewData = async event => {
-    event.preventDefault()
-    const url = 'https://wylo-posts-dun.vercel.app/addpost'
-    const postData = {title : title, content : content}
+  const enteringNewData = async (event) => {
+    event.preventDefault();
+    const url = "https://wylo-posts-dun.vercel.app/addpost";
+    const postData = { title: title, content: content };
     const options = {
-      method : "POST",
-      headers : {
-        "Content-Type" : "application/json",
-        Accept:"application/json",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
       },
-      body : JSON.stringify(postData),
-    }
+      body: JSON.stringify(postData),
+    };
     const response = await fetch(url, options);
-    if (response.ok === true){
-      setPageRendering(prevState => !prevState)
-      close()
-      alert("Post Successfully Created")
+    if (response.ok === true) {
+      setPageRendering((prevState) => !prevState);
+      close();
+      alert("Post Successfully Created");
+    } else {
+      alert("Data Not updated");
     }
-    else{
-      alert("Data Not updated")
-    }
-  }
+  };
   return (
     <div>
       <form onSubmit={enteringNewData}>
-      <p>Title : <span><input onChange={enteringTitle} type="text" /></span></p>
-        <p>Content : <span><textarea onChange={enteringContent} cols="60" type="text" /></span></p>
-        <button type='submit'>Create Post</button>
+        <label>Title :</label>
+        <input onChange={enteringTitle} type="text" />
+        <label>Content : </label>
+        <textarea onChange={enteringContent} cols="60" type="text" />
+        <button type="submit">Create Post</button>
       </form>
     </div>
   );

@@ -14,15 +14,13 @@ const EditPost = (props) => {
   const onUpdatingPost = async (event) => {
     event.preventDefault();
     const url = `https://wylo-posts-dun.vercel.app/post/${id}`;
-    let changedData
-    if (editedTitle === ''){
-      changedData = {content: editedContent}
-    }
-    else if (editedContent === ''){
-      changedData = {title: editedTitle}
-    }
-    else {
-      changedData = { title: editedTitle, content: editedContent } 
+    let changedData;
+    if (editedTitle === "") {
+      changedData = { content: editedContent };
+    } else if (editedContent === "") {
+      changedData = { title: editedTitle };
+    } else {
+      changedData = { title: editedTitle, content: editedContent };
     }
     const options = {
       method: "PUT",
@@ -36,30 +34,21 @@ const EditPost = (props) => {
     if (response.ok === true) {
       alert("Changes Saved Successfully");
       setPageRendering((prevState) => !prevState);
-      setEditedContent('')
-      setEditedTitle('')
-      close()
+      setEditedContent("");
+      setEditedTitle("");
+      close();
     } else {
       alert("Data not Changed");
     }
-    
   };
   return (
     <div className="editing-continer">
       <h1>Edit Your Post</h1>
       <form onSubmit={onUpdatingPost}>
-        <p>
-          Title:{" "}
-          <span>
-            <input onChange={editingTitle} type="text" />
-          </span>
-        </p>
-        <p>
-          Content :{" "}
-          <span>
-            <textarea onChange={editingContent} cols="60" type="text" />
-          </span>
-        </p>
+        <label>Title:</label>
+        <input onChange={editingTitle} type="text" />
+        <label>Content :</label>
+        <textarea onChange={editingContent} cols="60" type="text" />
         <button type="submit">Save Changes</button>
       </form>
     </div>
