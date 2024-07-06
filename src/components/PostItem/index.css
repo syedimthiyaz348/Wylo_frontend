@@ -1,0 +1,57 @@
+.each-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid grey;
+    height: 200px;
+    padding: 15px;
+    gap: 20px;
+    margin: 10px;
+    height: 300px;
+    width: 270px;
+    border-radius: 8px;
+}
+
+.title-heading{
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.title-edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    gap: 15px;
+    border-bottom: 2px solid grey;
+    
+    width: 100%;
+    padding: 5px 5px 15px 5px;
+}
+
+.edit-button{
+    width: 60px;
+    height: 35px;
+    border: none;
+    background-color: aqua;
+    border-radius: 8px;
+}
+
+.description{
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.delete-button{
+    font-size: 25px;
+    color: red;
+    border: none;
+    background-color: transparent;
+}
