@@ -41,7 +41,7 @@ const CreatePost = (props) => {
         <label>Title :</label>
         <input onChange={enteringTitle} type="text" />
         <label>Content : </label>
-        <textarea onChange={enteringContent} cols="60" type="text" />
+        <textarea onChange={enteringContent} type="text" />
         <button type="submit">Create Post</button>
       </form>
     </div>
