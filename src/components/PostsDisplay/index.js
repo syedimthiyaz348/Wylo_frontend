@@ -43,19 +43,19 @@ const PostDisplay = () => {
   }, [pageRendering]);
 
   const postsInProgress = () => {
-    return(
+    return (
       <div className="loader-container" data-testid="loader">
-      <ThreeCircles
-  visible={true}
-  height="100"
-  width="100"
-  color="#000000"
-  ariaLabel="three-circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  />
-    </div>
-    )
+        <ThreeCircles
+          visible={true}
+          height="100"
+          width="100"
+          color="#000000"
+          ariaLabel="three-circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      </div>
+    );
   };
 
   const failureView = () => {
@@ -84,10 +84,13 @@ const PostDisplay = () => {
     switch (apiStatus) {
       case displayConstants.success:
         return successPostsDisplaying();
+        break;
       case displayConstants.inProgress:
         return postsInProgress();
+        break;
       case displayConstants.failure:
         return failureView();
+        break;
       default:
         return null;
     }
