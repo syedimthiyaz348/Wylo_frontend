@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./index.css";
 
 const EditPost = (props) => {
-  const { id, setPageRendering, close } = props;
+  const { id, setPageRendering, close, title } = props;
   const [editedTitle, setEditedTitle] = useState("");
   const [editedContent, setEditedContent] = useState("");
   const editingTitle = (event) => {
@@ -44,6 +44,7 @@ const EditPost = (props) => {
   return (
     <div className="editing-continer">
       <h1>Edit Your Post</h1>
+      <p>Previous Title: {title}</p>
       <form onSubmit={onUpdatingPost}>
         <label>Title:</label>
         <input onChange={editingTitle} type="text" />

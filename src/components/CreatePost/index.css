@@ -21,3 +21,7 @@ form textarea{
     height: 100px;
     width: 100%;
 }
+
+.error-msg{
+    color: darkred;
+}
