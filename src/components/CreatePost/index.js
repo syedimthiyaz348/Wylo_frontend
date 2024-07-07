@@ -66,7 +66,7 @@ const CreatePost = (props) => {
         <label>Content : </label>
         <textarea onChange={enteringContent} type="text" />
         {contentErr && <p className="error-msg">*Required</p>}
-        <button type="submit">Create Post</button>
+        <button className="create-button" type="submit">Create</button>
       </form>
     </div>
   );

@@ -126,6 +126,33 @@ const PostDisplay = () => {
         </Popup>
       </div>
       <div className="posts-container">{pageSwitching()}</div>
+      <Popup
+          modal
+          trigger={
+            <button type="button" className="note-button">
+              Note
+            </button>
+          }
+        >
+          {(close) => (
+            <div className="create-post-content">
+              <button
+                type="button"
+                className="close-button"
+                onClick={() => close()}
+              >
+                <IoMdClose />
+              </button>
+              <div className="note-container">
+                <h1>Note:</h1>
+                <p><b>Post Display Page</b>: All the posts are displayed.</p>
+                <p><b>Create Post</b>: On Clicking to the CreatePost Button the New post creation page is opened. </p>
+                <p><b>Edit Button</b>: On Clicking the Edit Button the popup is opened to edit the post.</p>
+                <p><b>Delete Button</b>: On Clicking Delete Button The Selected Post will get Deleted. </p>
+              </div>
+            </div>
+          )}
+        </Popup>
     </div>
   );
 };

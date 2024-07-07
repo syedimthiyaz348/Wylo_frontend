@@ -50,7 +50,7 @@ const EditPost = (props) => {
         <input onChange={editingTitle} type="text" />
         <label>Content :</label>
         <textarea onChange={editingContent} cols="60" type="text" />
-        <button type="submit">Save Changes</button>
+        <button className="save-button" type="submit">Save Changes</button>
       </form>
     </div>
   );

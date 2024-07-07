@@ -1,3 +1,10 @@
 .editing-continer{
     text-align: center;
 }
+
+.save-button{
+    background-color: aqua;
+  height: 35px;  
+  border: none;
+  border-radius: 8px;
+}
