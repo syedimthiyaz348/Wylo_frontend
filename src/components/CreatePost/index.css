@@ -13,13 +13,36 @@ form{
         gap: 10px;
     }
     form textarea{
-        width: 50pxpx;
+        width: 50px;
+        border: 2px solid grey;
+    }
+    form input {
+        border: 2px solid grey;
+    }
+}
+
+@media ((min-width:767px) and (max-width:992px)){
+    form{
+        gap: 10px;
+        width: 100%;
+    }
+    form textarea{
+        width: 50px;
+        border: 2px solid grey;
+    }
+    form input {
+        border: 2px solid grey;
     }
 }
 
 form textarea{
     height: 100px;
     width: 100%;
+    border: 2px solid grey;
+}
+
+form input{
+    border: 2px solid grey;
 }
 
 .error-msg{

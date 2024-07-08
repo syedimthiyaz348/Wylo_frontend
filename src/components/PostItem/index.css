@@ -18,6 +18,10 @@
 
 }
 
+.delete-edit{
+    width: 50%;
+}
+
 .title-edit{
     display: flex;
     flex-direction: row;
@@ -26,7 +30,6 @@
     font-size: 15px;
     gap: 15px;
     border-bottom: 2px solid grey;
-    
     width: 100%;
     padding: 5px 5px 15px 5px;
 }
@@ -54,3 +57,40 @@
     border: none;
     background-color: transparent;
 }
+
+@media ((min-width:767px) and (max-width:992px)){
+    .each-post{
+        height: 300px;
+        width: 340px;
+        border-radius: 8px;
+    }
+}
+
+@media ((min-width:992px) and (max-width:1200px)){
+    .each-post{
+        height: 330px;
+        width: 290px;
+        border-radius: 8px;
+
+    }
+    .title-heading{
+        font-size: 15px;
+        font-weight: bold;
+        width:100px;    
+    }
+}
+
+@media (orientation: landscape){
+    .each-post{
+        height: 300px;
+        width: 270px;
+        border-radius: 8px;
+
+    }
+    .title-heading{
+        font-size: 15px;
+        font-weight: bold;
+        width:100px;    
+    }
+}
+

@@ -25,7 +25,7 @@ const PostItem = (props) => {
     <div className="each-post">
       <div className="title-edit">
         <h1 className="title-heading">{title}</h1>
-        <div>
+        <div className="delete-edit">
         <Popup
           modal
           trigger={
