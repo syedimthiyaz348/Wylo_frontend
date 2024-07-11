@@ -47,9 +47,9 @@ const EditPost = (props) => {
       <p>Previous Title: {title}</p>
       <form onSubmit={onUpdatingPost}>
         <label>Title:</label>
-        <input onChange={editingTitle} type="text" />
+        <input value={editedTitle} onChange={editingTitle} type="text" />
         <label>Content :</label>
-        <textarea onChange={editingContent} cols="60" type="text" />
+        <textarea value={editedContent} onChange={editingContent} cols="60" type="text" />
         <button className="save-button" type="submit">Save Changes</button>
       </form>
     </div>
