@@ -6,7 +6,7 @@ import './index.css'
 const Header = () => {
   return (
     <div className="header">
-      <h1>Wylo</h1>
+      <h1>Header</h1>
     </div>
   );
 };
